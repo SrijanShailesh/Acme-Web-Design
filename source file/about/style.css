@@ -1,0 +1,31 @@
+.about__us {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+}
+
+.about__us div {
+  grid-column: 3 / 4;
+  background: gray;
+
+  margin: 1.4em;
+  padding: 10px;
+  color: aliceblue;
+}
+
+section:nth-child(odd) {
+    grid-column: 1 / 3;
+    margin: 2em 5em;
+}
+
+section:nth-last-child(1) {
+    background: gray;
+    color: aliceblue;
+    padding: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+}

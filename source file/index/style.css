@@ -1,0 +1,152 @@
+/* BUG: (1) In subscription section focus state is not working (2) In services section flex-flow is not working by converting flex-direction into row or column */
+
+/* Task: Work on services section */
+
+:root {
+    --bg:  rgb(100, 100, 100);
+    --orange: rgb(255, 135, 56);
+    --tcolor: rgb(245, 245, 245);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    letter-spacing: 1.3px;
+
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+    padding: 20px;
+    border-bottom: 3px solid var(--orange);
+    background-color: var(--bg);
+}
+
+header span, .main-nav .orange {
+    color: var(--orange);
+}
+
+/* navigation */
+
+.main-nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-nav li {
+    display: inline;
+    padding: 0px 7px;
+}
+
+.main-nav ul {
+    padding: 5px;
+}
+
+/* hover-state */
+
+.main-nav a:hover {
+    color: var(--orange);
+    letter-spacing: 2px;
+}
+
+.main-nav .orange:hover {
+    color: whitesmoke;
+}
+
+/* hero-section */
+
+.hero-section {
+    height: 400px;
+    width: 100%;
+    background-color: rgb(211, 211, 211);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* subscription */
+
+.subscription {
+    background: var(--bg);
+    padding: 30px 0px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subscription h3 {
+    color: aliceblue;
+    letter-spacing: 2.4px;
+}
+
+.subscription input[type=email] {
+    padding: 5px;
+}
+
+.subscription #sub__button {
+    border: none;
+    padding: 5px;
+
+    background: var(--orange);
+    color: aliceblue;
+}
+
+/* focus-state */
+
+.subscription input [type=email]:focus {
+    background: var(--orange);
+}
+
+/* hover-state */
+
+.subscription #sub__button:hover {
+    background: rgb(139, 139, 139);
+}
+
+/* services */
+
+.services  {
+    padding: 2.5em 0em;
+    width: 100%;
+    background: rgb(211, 211, 211);
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-align: center;
+}
+
+.services img {
+    height: 100px;
+}
+
+/* footer */
+
+footer {
+    background: var(--orange);
+    text-align: center;
+    color: aliceblue;
+    
+    width: 100%;
+    padding: 50px;
+}
